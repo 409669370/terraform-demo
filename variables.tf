@@ -1,3 +1,11 @@
+variable "access_key" {
+  type    = string
+}
+
+variable "secret_key" {
+  type    = string
+}
+
 variable "availability_zone_names" {
   type    = string
   default = "cn-qingdao-c"
