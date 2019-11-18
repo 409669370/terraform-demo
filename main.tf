@@ -67,15 +67,3 @@ resource "alicloud_instance" "web_server" {
   vswitch_id           = "${alicloud_vswitch.main.id}"
   key_name             = "${alicloud_key_pair.public_key.id}"
 }
-
-resource "alicloud_instance" "web_server1" {
-  image_id             = "${var.img_id}"
-  instance_type        = "${var.instance_type}"
-  instance_charge_type = "PostPaid"
-  internet_charge_type = "PayByTraffic"
-  system_disk_category = "cloud_efficiency"
-  instance_name        = "web-server"
-  security_groups      = ["${alicloud_security_group.main.id}"]
-  vswitch_id           = "${alicloud_vswitch.main.id}"
-  key_name             = "${alicloud_key_pair.public_key.id}"
-}
