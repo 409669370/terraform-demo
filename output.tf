@@ -1,3 +1,3 @@
 output "eip" {
-  value = "${alicloud_eip.eip}"
+  value = alicloud_eip.eip
 }
