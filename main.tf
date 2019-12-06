@@ -68,3 +68,14 @@ resource "alicloud_instance" "web_server" {
   vswitch_id = alicloud_vswitch.main.id
   key_name = alicloud_key_pair.public_key.id
 }
+
+resource "alicloud_db_instance" "default" {
+  engine               = "MySQL"
+  engine_version       = "5.6"
+  instance_type        = "rds.mysql.s2.large"
+  instance_storage     = "30"
+  instance_charge_type = "Postpaid"
+  instance_name        = "mysqldatabase"
+  vswitch_id           = alicloud_vswitch.main.id
+  monitoring_period    = "60"
+}
