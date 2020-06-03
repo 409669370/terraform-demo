@@ -1,11 +1,3 @@
-variable "alicloud_access_key" {
-  type = string
-}
-
-variable "alicloud_secret_key" {
-  type = string
-}
-
 variable "availability_zone_names" {
   type    = string
   default = "cn-qingdao-c"
